@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" language="jambi">
+ <class>ReplaceDialog</class>
+ <widget class="QWidget" name="ReplaceDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>489</width>
+    <height>126</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Reemplazar</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>classpath:es/upv/etsinf/ipc/icons/replace.png</normaloff>classpath:es/upv/etsinf/ipc/icons/replace.png</iconset>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>80</y>
+     <width>289</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="replaceNext">
+      <property name="text">
+       <string>Siguiente</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>classpath:es/upv/etsinf/ipc/icons/next.png</normaloff>classpath:es/upv/etsinf/ipc/icons/next.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="replaceAll">
+      <property name="text">
+       <string>Todos</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>classpath:es/upv/etsinf/ipc/icons/all.png</normaloff>classpath:es/upv/etsinf/ipc/icons/all.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exitButton">
+      <property name="text">
+       <string>Cerrar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>classpath:es/upv/etsinf/ipc/icons/cancel.png</normaloff>classpath:es/upv/etsinf/ipc/icons/cancel.png</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>121</x>
+     <y>1</y>
+     <width>251</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="searchLineEdit">
+      <property name="text">
+       <string>Búsqueda...</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="replaceLineEdit">
+      <property name="text">
+       <string>Reemplazo...</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

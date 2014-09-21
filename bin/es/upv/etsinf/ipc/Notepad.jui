@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" language="jambi">
+ <class>Notepad</class>
+ <widget class="QMainWindow" name="Notepad">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>800</width>
+        <height>600</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="newAction"/>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="printAction"/>
+    <addaction name="exitAction"/>
+   </widget>
+   <widget class="QMenu" name="menuAcerca">
+    <property name="title">
+     <string>Acerca</string>
+    </property>
+    <addaction name="infoAction"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="helpAction"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas">
+    <property name="title">
+     <string>Herramientas</string>
+    </property>
+    <addaction name="undoAction"/>
+    <addaction name="redoAction"/>
+    <addaction name="cutAction"/>
+    <addaction name="copyAction"/>
+    <addaction name="pasteAction"/>
+    <addaction name="replaceAction"/>
+    <addaction name="searchAction"/>
+    <addaction name="personAction"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>Vista</string>
+    </property>
+    <addaction name="plainTextAction"/>
+    <addaction name="htmlAction"/>
+   </widget>
+   <widget class="QMenu" name="menuTexto">
+    <property name="title">
+     <string>Texto</string>
+    </property>
+    <widget class="QMenu" name="menuContar">
+     <property name="title">
+      <string>Contar</string>
+     </property>
+     <addaction name="charAction"/>
+     <addaction name="wordAction"/>
+     <addaction name="lineAction"/>
+    </widget>
+    <addaction name="mayAction"/>
+    <addaction name="minAction"/>
+    <addaction name="menuContar"/>
+    <addaction name="origAction"/>
+    <addaction name="underAction"/>
+    <addaction name="italAction"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuHerramientas"/>
+   <addaction name="menuTexto"/>
+   <addaction name="menuView"/>
+   <addaction name="menuAcerca"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="newAction"/>
+   <addaction name="openAction"/>
+   <addaction name="saveAction"/>
+   <addaction name="printAction"/>
+   <addaction name="separator"/>
+   <addaction name="searchAction"/>
+   <addaction name="replaceAction"/>
+   <addaction name="separator"/>
+   <addaction name="redoAction"/>
+   <addaction name="undoAction"/>
+   <addaction name="separator"/>
+   <addaction name="plainTextAction"/>
+   <addaction name="htmlAction"/>
+  </widget>
+  <action name="newAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/new.png</normaloff>classpath:es/upv/etsinf/ipc/icons/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Nuevo</string>
+   </property>
+   <property name="toolTip">
+    <string>Limpia la ventana</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/open.png</normaloff>classpath:es/upv/etsinf/ipc/icons/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Abrir</string>
+   </property>
+   <property name="toolTip">
+    <string>Abre un archivo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/save.png</normaloff>classpath:es/upv/etsinf/ipc/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Guardar</string>
+   </property>
+   <property name="toolTip">
+    <string>Guarda el archivo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="infoAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/info.png</normaloff>classpath:es/upv/etsinf/ipc/icons/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Acerca de</string>
+   </property>
+   <property name="toolTip">
+    <string>Información sobre el proyecto</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="helpAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/help.png</normaloff>classpath:es/upv/etsinf/ipc/icons/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Ayuda</string>
+   </property>
+   <property name="toolTip">
+    <string>Ayuda sobre Notepad</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="undoAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/undo.png</normaloff>classpath:es/upv/etsinf/ipc/icons/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Deshacer</string>
+   </property>
+   <property name="toolTip">
+    <string>Deshace el último cambio</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="redoAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/redo.png</normaloff>classpath:es/upv/etsinf/ipc/icons/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Rehacer</string>
+   </property>
+   <property name="toolTip">
+    <string>Rehace el último cambio</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="cutAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/cut.png</normaloff>classpath:es/upv/etsinf/ipc/icons/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Cortar</string>
+   </property>
+   <property name="toolTip">
+    <string>Corta el texto seleccionado</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="copyAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/copy.png</normaloff>classpath:es/upv/etsinf/ipc/icons/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Copiar</string>
+   </property>
+   <property name="toolTip">
+    <string>Copia el texto seleccionado</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="pasteAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/paste.png</normaloff>classpath:es/upv/etsinf/ipc/icons/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Pegar</string>
+   </property>
+   <property name="toolTip">
+    <string>Pega el texto del portapapeles</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="searchAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/find.png</normaloff>classpath:es/upv/etsinf/ipc/icons/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Buscar</string>
+   </property>
+   <property name="toolTip">
+    <string>Busca el texto seleccionado</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="replaceAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/replace.png</normaloff>classpath:es/upv/etsinf/ipc/icons/replace.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Reemplazar</string>
+   </property>
+   <property name="toolTip">
+    <string>Reemplaza la ocurrencia por otra palabra</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="exitAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/exit.png</normaloff>classpath:es/upv/etsinf/ipc/icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Salir</string>
+   </property>
+   <property name="toolTip">
+    <string>Cierra Notepad</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="htmlAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/html.png</normaloff>classpath:es/upv/etsinf/ipc/icons/html.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;HTML</string>
+   </property>
+   <property name="toolTip">
+    <string>Interpretar texto html</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="plainTextAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/plain.png</normaloff>classpath:es/upv/etsinf/ipc/icons/plain.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Texto Plano</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia la representación a texto plano</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="printAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/impresora.png</normaloff>classpath:es/upv/etsinf/ipc/icons/impresora.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Imprimir</string>
+   </property>
+   <property name="toolTip">
+    <string>Imprimir documento actual</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="mayAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/AMayuscula.png</normaloff>classpath:es/upv/etsinf/ipc/icons/AMayuscula.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;A mayúsculas</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia el texto seleccionado a mayúsculas</string>
+   </property>
+  </action>
+  <action name="minAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/aMinuscula.png</normaloff>classpath:es/upv/etsinf/ipc/icons/aMinuscula.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;A minúsculas</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia el texto seleccionado a minúsculas</string>
+   </property>
+  </action>
+  <action name="charAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/numeros.png</normaloff>classpath:es/upv/etsinf/ipc/icons/numeros.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Caracteres</string>
+   </property>
+   <property name="toolTip">
+    <string>Cuenta los caracteres del documento</string>
+   </property>
+  </action>
+  <action name="wordAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/numeros.png</normaloff>classpath:es/upv/etsinf/ipc/icons/numeros.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Palabras</string>
+   </property>
+   <property name="toolTip">
+    <string>Cuenta las palabras del documento</string>
+   </property>
+  </action>
+  <action name="lineAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/numeros.png</normaloff>classpath:es/upv/etsinf/ipc/icons/numeros.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Lineas</string>
+   </property>
+   <property name="toolTip">
+    <string>Cuenta el nº de lineas del documento</string>
+   </property>
+  </action>
+  <action name="origAction">
+   <property name="text">
+    <string>&amp;Original</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia el texto seleccionado a tipo original</string>
+   </property>
+  </action>
+  <action name="underAction">
+   <property name="text">
+    <string>&amp;Subrayado</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia el texto seleccionado a tipo subrayado</string>
+   </property>
+  </action>
+  <action name="italAction">
+   <property name="text">
+    <string>&amp;Itálica</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia el texto seleccionado a tipo itálica</string>
+   </property>
+  </action>
+  <action name="personAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>classpath:es/upv/etsinf/ipc/icons/person.png</normaloff>classpath:es/upv/etsinf/ipc/icons/person.png</iconset>
+   </property>
+   <property name="text">
+    <string>infoPersona</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
